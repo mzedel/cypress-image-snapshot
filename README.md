@@ -1,5 +1,8 @@
 # Cypress Image Snapshot
 
+# `mzedel/cypress-image-snapshot`
+
+This is a fork of [`cypress-image-snapshot`](https://github.com/palmerhq/cypress-image-snapshot) to address a short-term need we have in our CI for the [Mender GUI](https://github.com/mendersoftware/gui), since the official package takes a bit longer to get changes in. It is not intended to be maintained & supported for a longer time - so use only if you absolutely have to.
 
 Cypress Image Snapshot binds [jest-image-snapshot](https://github.com/americanexpress/jest-image-snapshot)'s image diffing logic to [Cypress.io](https://cypress.io) commands. **The goal is to catch visual regressions during integration tests.**
 
@@ -41,7 +44,7 @@ then add the following in your project's `<rootDir>/cypress/plugins/index.js`:
 ```js
 const {
   addMatchImageSnapshotPlugin,
-} = require('cypress-image-snapshot/plugin');
+} = require('mzedel-cypress-image-snapshot/plugin');
 
 module.exports = (on, config) => {
   addMatchImageSnapshotPlugin(on, config);
@@ -51,7 +54,7 @@ module.exports = (on, config) => {
 and in `<rootDir>/cypress/support/commands.js` add:
 
 ```js
-import { addMatchImageSnapshotCommand } from 'cypress-image-snapshot/command';
+import { addMatchImageSnapshotCommand } from 'mzedel-cypress-image-snapshot/command';
 
 addMatchImageSnapshotCommand();
 ```
