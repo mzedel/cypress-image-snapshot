@@ -20,7 +20,7 @@ function reporter(runner) {
           `\n  - ${diffOutputPath}\n    Screenshot was ${diffRatio *
             100}% different from saved snapshot with ${diffPixelCount} different pixels.\n`
         );
-        termImage(diffOutputPath, { fallback });
+        console.log(termImage(diffOutputPath, { fallback }));
       });
     }
 
