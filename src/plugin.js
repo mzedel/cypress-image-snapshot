@@ -62,11 +62,12 @@ export function matchImageSnapshotPlugin({ path: screenshotPath }) {
       failureThresholdType = 'pixel',
       customSnapshotsDir,
       customDiffDir,
+      snapshotOverride = screenshotPath,
       ...options
     } = {},
   } = snapshotOptions;
 
-  const receivedImageBuffer = fs.readFileSync(screenshotPath);
+  const receivedImageBuffer = fs.readFileSync(snapshotOverride);
   fs.removeSync(screenshotPath);
 
   const { dir: screenshotDir, name } = path.parse(
