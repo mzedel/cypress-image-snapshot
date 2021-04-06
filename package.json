@@ -1,6 +1,6 @@
 {
   "name": "mzedel-cypress-image-snapshot",
-  "version": "4.0.3",
+  "version": "4.0.5",
   "description": "Cypress bindings for jest-image-snapshot.",
   "repository": "https://github.com/mzedel/cypress-image-snapshot",
   "author": "Jack Cross <jack@palmer.net>",
